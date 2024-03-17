@@ -10,6 +10,11 @@
     "prepare": "husky",
     "format": "prettier --write . --ignore-unknown"
   },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
   "lint-staged": {
     "*.{js,jsx,ts,tsx}": [
       "prettier --write",
