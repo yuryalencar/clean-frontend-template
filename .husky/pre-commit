@@ -1,7 +1,10 @@
 #!/bin/sh
 . "$(dirname "$0")/_/husky.sh"
 
+FILES=$(git diff --staged --name-only)
+
 npx lint-staged
 npx eslint --fix
 npx prettier --write . --ignore-unknown
-git add
+
+echo "$FILES" | xargs git add
