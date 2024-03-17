@@ -51,10 +51,19 @@ Run the development server:
 This project includes ESLint for linting JavaScript and TypeScript files, Prettier for code formatting, and Husky to automatically run linting and formatting checks before committing your code.
 
 To manually run linting:
+
 ```bash
    pnpm lint     # first option
    yarn lint     # second option
    npm run lint  # third option
+```
+
+Prettier is integrated into the linting process and will automatically format your code to adhere to the defined code style rules. However, you can also manually format your code using the following command:
+
+```bash
+   pnpm format     # first option
+   yarn format     # second option
+   npm run format  # third option
 ```
 
 ## Commit Message Linting
